@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sanskrit RAG Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>🕉️ Sanskrit RAG Assistant</h1>
+            <p>Ask questions from Sanskrit stories</p>
+        </header>
+
+        <div class="chat-box">
+            <textarea id="question" placeholder="Type your Sanskrit question here..."></textarea>
+            <button onclick="askQuestion()">Ask Question</button>
+        </div>
+
+        <div class="response-card">
+            <h3>📜 Answer</h3>
+            <p id="answer">Your answer will appear here...</p>
+
+            <div class="timing">
+                ⏱ Retrieval: <span id="retrieval">0.000</span> sec |
+                ⏱ Generation: <span id="generation">0.000</span> sec
+            </div>
+        </div>
+    </div>
+
+<script>
+async function askQuestion() {
+    const question = document.getElementById("question").value.trim();
+    if (!question) return;
+
+    document.getElementById("answer").innerText = "⏳ Thinking...";
+    document.getElementById("retrieval").innerText = "...";
+    document.getElementById("generation").innerText = "...";
+
+    const response = await fetch("/ask", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ question: question })
+    });
+
+    const data = await response.json();
+
+    document.getElementById("answer").innerText = data.answer;
+    document.getElementById("retrieval").innerText =
+        data.retrieval_time ? data.retrieval_time.toFixed(3) : "0.000";
+    document.getElementById("generation").innerText =
+        data.generation_time ? data.generation_time.toFixed(3) : "0.000";
+}
+</script>
+</body>
+</html>
