@@ -1,4 +1,61 @@
-# 🕉️ Sanskrit RAG Chatbot  
+*****************************************************************************************************************************************************************
+How to Run the Sanskrit RAG Chatbot: 
+1. Clone the Repository
+git clone https://github.com/YOUR_USERNAME/sanskrit-rag-chatbot.git
+cd sanskrit-rag-chatbot
+2. Create Virtual Environment
+
+2.1 macOS / Linux
+python3 -m venv rag_env
+source rag_env/bin/activate
+
+2.2 Windows
+python -m venv rag_env
+rag_env\Scripts\activate
+
+3. Install Dependencies
+pip install -r requirements.txt
+
+4. Add Your Groq API Key
+
+Create a .env file in the project root:
+
+touch .env
+
+Add this inside:
+
+GROQ_API_KEY=your_groq_api_key_here
+get api key from : https://console.groq.com/home
+
+5 .Add Sanskrit Documents
+
+Place your Sanskrit source document inside the data/ folder.
+
+Supported formats:
+
+.docx
+
+.txt
+
+.pdf
+
+Example:
+
+data/Rag-docs.docx
+
+6. Run Document Ingestion (Build Search Index)
+
+This step chunks documents + creates FAISS + BM25 indexes
+
+python rag_core/ingest.py
+
+7. Start the FastAPI Server
+uvicorn api.main:app --reload --port 8000
+
+******************************************************************************************************************************************************************
+
+
+🕉️ Sanskrit RAG Chatbot  
 ### End-to-End Retrieval Augmented Generation System for Sanskrit Question Answering
 
 This project implements an **End-to-End Retrieval Augmented Generation (RAG) chatbot** that answers questions in **Sanskrit** using a hybrid search system and Large Language Models.
@@ -86,5 +143,7 @@ The system follows a complete RAG pipeline:
 │   └── transliterate.py
 ├── README.md
 └── report
+
+
 
 
