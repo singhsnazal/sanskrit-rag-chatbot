@@ -65,9 +65,10 @@ It supports:
 - Queries in **Transliteration (Latin script)**  
 - Context-grounded responses using **Hybrid Retrieval (FAISS + BM25)**
 
----
+## 🚀 System Overview ---<img width="1233" height="350" alt="indexing(part2)" src="https://github.com/user-attachments/assets/d6c3bc5f-279e-4291-89fa-c9471ee92192" />
+<img width="981" height="1242" alt="rag_pipeline(2)" src="https://github.com/user-attachments/assets/84cf8223-1b1b-4bf3-9665-712a5c71d5ff" />
 
-## 🚀 System Overview<img width="772" height="350" alt="Screenshot 2026-01-30 at 1 15 54 AM" src="https://github.com/user-attachments/assets/c2fb99b1-2a09-4bfd-9a14-e3355038c779" />
+
 
 
 The system follows a complete RAG pipeline:
@@ -144,9 +145,14 @@ The system follows a complete RAG pipeline:
 │   └── transliterate.py
 ├── README.md
 └── report
-<img width="772" height="350" alt="Screenshot 2026-01-30 at 1 15 54 AM" src="https://github.com/user-attachments/assets/81d4ae73-8123-41dd-8074-19058711a84a" />
-<img width="772" height="350" alt="Screenshot 2026-01-30 at 1 15 54 AM" src="https://github.com/user-attachments/assets/bdf69d34-4737-487c-92a1-205fc8f27d11" />
 
+<img width="772" height="350" alt="Screenshot 2026-01-30 at 1 15 54 AM" src="https://github.com/user-attachments/assets/81d4ae73-8123-41dd-8074-19058711a84a" />
+
+
+<img width="889" height="552" alt="Screenshot 2026-01-30 at 1 34 38 PM" src="https://github.com/user-attachments/assets/ef1d7f3d-a569-4697-84b0-1f75e9896cbd" />
+
+
+<img width="889" height="552" alt="Screenshot 2026-01-30 at 1 29 50 PM" src="https://github.com/user-attachments/assets/9d255976-19c1-482e-ba6e-66a4fe39c7df" />
 
 
 
