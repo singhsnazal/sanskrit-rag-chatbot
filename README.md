@@ -67,7 +67,8 @@ It supports:
 
 ---
 
-## 🚀 System Overview
+## 🚀 System Overview<img width="772" height="350" alt="Screenshot 2026-01-30 at 1 15 54 AM" src="https://github.com/user-attachments/assets/c2fb99b1-2a09-4bfd-9a14-e3355038c779" />
+
 
 The system follows a complete RAG pipeline:
 
@@ -143,6 +144,12 @@ The system follows a complete RAG pipeline:
 │   └── transliterate.py
 ├── README.md
 └── report
+<img width="772" height="350" alt="Screenshot 2026-01-30 at 1 15 54 AM" src="https://github.com/user-attachments/assets/81d4ae73-8123-41dd-8074-19058711a84a" />
+<img width="772" height="350" alt="Screenshot 2026-01-30 at 1 15 54 AM" src="https://github.com/user-attachments/assets/bdf69d34-4737-487c-92a1-205fc8f27d11" />
+
+
+
+
 
 
 
