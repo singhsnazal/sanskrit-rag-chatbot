@@ -59,4 +59,32 @@ The system follows a complete RAG pipeline:
 ---
 
 ## 📂 Project Structure
+.
+├── api
+│   └── main.py
+├── data
+│   └── Rag-docs.docx
+├── evaluation
+│   └── evaluate_rag.py
+├── evaluation_results.json
+├── frontend
+│   ├── static
+│   │   └── style.css
+│   └── templates
+│       └── index.html
+├── rag_core
+│   ├── __init__.py
+│   ├── bm25_docs.pkl
+│   ├── check_index_dim.py
+│   ├── faiss_index
+│   │   ├── index.faiss
+│   │   └── index.pkl
+│   ├── ingest.py
+│   ├── query_logic.py
+│   ├── rag_pipeline.py
+│   ├── test_retrieval_speed.py
+│   └── transliterate.py
+├── README.md
+└── report
+
 
